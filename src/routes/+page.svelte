@@ -12,6 +12,12 @@
         <JournalEntry
             entry_title = "Second Entry"
             entry_date = "2023-05-07"
+            entry_image =  {{
+                src: "src/assets/exampleimage.jpg",
+                id: "1",
+                text: "This is space.",
+                desc: "space"
+             }}
             entry_text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis vulputate enim nulla aliquet porttitor lacus luctus. In nisl nisi scelerisque eu ultrices vitae auctor eu augue. Id aliquet risus feugiat in ante metus dictum at. Quisque id diam vel quam elementum pulvinar etiam non. Sed blandit libero volutpat sed cras ornare arcu. Aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices. Diam in arcu cursus euismod quis viverra nibh cras pulvinar. Cursus in hac habitasse platea dictumst. Vulputate dignissim suspendisse in est.
 
             Egestas dui id ornare arcu odio ut sem. In cursus turpis massa tincidunt dui ut ornare lectus. Semper risus in hendrerit gravida. Erat pellentesque adipiscing commodo elit. Duis ut diam quam nulla porttitor. Ac feugiat sed lectus vestibulum mattis. Lacus vel facilisis volutpat est velit egestas dui id ornare. Gravida cum sociis natoque penatibus. Sit amet consectetur adipiscing elit duis tristique sollicitudin nibh. Neque vitae tempus quam pellentesque nec nam aliquam. At ultrices mi tempus imperdiet nulla. Integer enim neque volutpat ac tincidunt vitae semper. Pellentesque sit amet porttitor eget. Sed turpis tincidunt id aliquet risus feugiat in. Eu consequat ac felis donec. Pulvinar mattis nunc sed blandit libero volutpat sed cras.
@@ -25,6 +31,7 @@
         <JournalEntry
             entry_title = "First Entry"
             entry_date = "2023-05-06"
+            entry_image = {null}
             entry_text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque viverra justo nec ultrices dui sapien eget mi proin. Diam vel quam elementum pulvinar etiam non quam lacus. Proin fermentum leo vel orci porta non pulvinar. Enim diam vulputate ut pharetra sit amet. Nisi quis eleifend quam adipiscing vitae proin sagittis. Cras tincidunt lobortis feugiat vivamus at augue eget arcu. Nam libero justo laoreet sit amet cursus sit amet. Pellentesque nec nam aliquam sem et tortor consequat id porta. Dictumst quisque sagittis purus sit amet volutpat. Vitae auctor eu augue ut lectus arcu bibendum at. A pellentesque sit amet porttitor eget dolor. Ut etiam sit amet nisl.
 
             In eu mi bibendum neque. Dui accumsan sit amet nulla facilisi morbi. At volutpat diam ut venenatis tellus in. Nibh sit amet commodo nulla. Cursus euismod quis viverra nibh. Et ligula ullamcorper malesuada proin libero nunc consequat interdum. Massa tincidunt nunc pulvinar sapien. Ornare quam viverra orci sagittis eu. In nibh mauris cursus mattis molestie. Placerat orci nulla pellentesque dignissim enim sit.
@@ -37,7 +44,7 @@
         />
     </div>
     <footer>
-        <p>KTH DH2323</p>
+        <p>KTH DH2323 - <a href="https://github.com/procedural-planets/planets-src" target="_blank" rel="noopener noreferrer">GitHub Repository</a></p>
     </footer>
 </main>
 
@@ -56,7 +63,7 @@
 
     :global(h1) {
         font-family: 'EB Garamond';
-        font-size: 3vh;
+        font-size: 4.4vh;
         text-align: center;
     }
 
@@ -85,7 +92,17 @@
         color:rgb(124, 158, 155)
     }
 
+    footer a {
+        color: white;
+    }
+
     footer {
         height: 4em;
+    }
+
+    @media only screen and (max-width: 768px) {
+        main {
+            width: 90vw;
+        }
     }
 </style>
