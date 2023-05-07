@@ -13,7 +13,7 @@
             entry_title = "Second Entry"
             entry_date = "2023-05-07"
             entry_image =  {{
-                src: "src/assets/exampleimage.jpg",
+                src: "exampleimage.jpg",
                 id: "1",
                 text: "This is space.",
                 desc: "space"
