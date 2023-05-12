@@ -10,7 +10,24 @@
     </div>
     <div class="jorunal">
         <JournalEntry
-            entry_title = "Second Entry"
+        entry_title = "A Sphere is Born"
+        entry_date = "2023-05-12"
+        entry_image =  {{
+            src: "1.png",
+            id: "1",
+            text: "A basic sphere. Note the lines indicating different surface normals.",
+            desc: "sphere"
+         }}
+        entry_text = "The first thing that God did when he created the universe was to create spheres. Without spheres, no planets. Without planets, no humans. Without humans, no DGI course.
+
+        The first step for us and this project is the same. We want to create a solar system with procedurally generated planets. To create these planets, we need spheres! We base our planets on Sebastian Lague's technique for creating spheres. His series about the topic has inspried this project.
+
+        This technique uses a cube to create a sphere since the size of triangles are the same, resulting in an even distribution of detail. Furthermore, the number of triangles are increased at a reasonable rate when the level of detail is increased. One issue with this technique is that, since the sphere is created from the sides of a cube, surface normals do not match up. This can be seen in the image above. It will however be fixed later in this project.
+        
+        "
+        />
+        <!-- <JournalEntry
+            entry_title = "Sample Entry With Image"
             entry_date = "2023-05-07"
             entry_image =  {{
                 src: "exampleimage.jpg",
@@ -27,21 +44,7 @@
             Nullam vehicula ipsum a arcu cursus vitae congue mauris. Posuere lorem ipsum dolor sit amet consectetur. Turpis egestas maecenas pharetra convallis posuere morbi leo. In cursus turpis massa tincidunt. Fermentum odio eu feugiat pretium nibh. Ornare suspendisse sed nisi lacus sed viverra tellus in hac. In ornare quam viverra orci sagittis eu volutpat odio facilisis. Libero id faucibus nisl tincidunt eget nullam non nisi est. Tincidunt tortor aliquam nulla facilisi cras fermentum. Nisi scelerisque eu ultrices vitae auctor. Enim nunc faucibus a pellentesque. Scelerisque felis imperdiet proin fermentum leo vel orci porta. Amet venenatis urna cursus eget nunc scelerisque. Mattis pellentesque id nibh tortor. Suscipit adipiscing bibendum est ultricies integer quis auctor. Adipiscing diam donec adipiscing tristique risus nec feugiat. Lorem mollis aliquam ut porttitor leo a diam sollicitudin.
             
             Amet massa vitae tortor condimentum lacinia quis vel. Sed euismod nisi porta lorem mollis aliquam ut. Semper risus in hendrerit gravida rutrum quisque non tellus. Fames ac turpis egestas maecenas pharetra convallis posuere morbi leo. Id velit ut tortor pretium. Ullamcorper morbi tincidunt ornare massa. Et netus et malesuada fames ac turpis. Etiam non quam lacus suspendisse faucibus interdum. Metus dictum at tempor commodo ullamcorper a lacus vestibulum. Risus pretium quam vulputate dignissim suspendisse in est ante in. Cursus metus aliquam eleifend mi in nulla posuere sollicitudin aliquam. Urna nunc id cursus metus aliquam eleifend."
-        />
-        <JournalEntry
-            entry_title = "First Entry"
-            entry_date = "2023-05-06"
-            entry_image = {null}
-            entry_text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque viverra justo nec ultrices dui sapien eget mi proin. Diam vel quam elementum pulvinar etiam non quam lacus. Proin fermentum leo vel orci porta non pulvinar. Enim diam vulputate ut pharetra sit amet. Nisi quis eleifend quam adipiscing vitae proin sagittis. Cras tincidunt lobortis feugiat vivamus at augue eget arcu. Nam libero justo laoreet sit amet cursus sit amet. Pellentesque nec nam aliquam sem et tortor consequat id porta. Dictumst quisque sagittis purus sit amet volutpat. Vitae auctor eu augue ut lectus arcu bibendum at. A pellentesque sit amet porttitor eget dolor. Ut etiam sit amet nisl.
-
-            In eu mi bibendum neque. Dui accumsan sit amet nulla facilisi morbi. At volutpat diam ut venenatis tellus in. Nibh sit amet commodo nulla. Cursus euismod quis viverra nibh. Et ligula ullamcorper malesuada proin libero nunc consequat interdum. Massa tincidunt nunc pulvinar sapien. Ornare quam viverra orci sagittis eu. In nibh mauris cursus mattis molestie. Placerat orci nulla pellentesque dignissim enim sit.
-            
-            Scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique senectus et. Adipiscing elit pellentesque habitant morbi tristique senectus et netus et. Quis ipsum suspendisse ultrices gravida dictum fusce. Est lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque. Id nibh tortor id aliquet lectus proin nibh nisl. Commodo viverra maecenas accumsan lacus vel facilisis. Lectus sit amet est placerat in egestas. Sed odio morbi quis commodo odio. Enim praesent elementum facilisis leo vel fringilla est. Arcu cursus vitae congue mauris. Non pulvinar neque laoreet suspendisse interdum consectetur libero id. Amet consectetur adipiscing elit duis tristique sollicitudin nibh. Tellus molestie nunc non blandit massa. Scelerisque mauris pellentesque pulvinar pellentesque habitant.
-            
-            Massa vitae tortor condimentum lacinia quis vel eros. Quis ipsum suspendisse ultrices gravida dictum fusce ut placerat orci. Ultricies integer quis auctor elit sed vulputate mi. Arcu felis bibendum ut tristique et egestas quis ipsum suspendisse. Nisl pretium fusce id velit ut tortor pretium viverra. Commodo odio aenean sed adipiscing diam donec adipiscing tristique risus. Eget est lorem ipsum dolor sit. At ultrices mi tempus imperdiet. Sem fringilla ut morbi tincidunt augue interdum velit euismod. Elit eget gravida cum sociis. Enim lobortis scelerisque fermentum dui faucibus. Hac habitasse platea dictumst quisque sagittis purus. Lorem mollis aliquam ut porttitor. Elementum facilisis leo vel fringilla est ullamcorper eget nulla. Adipiscing at in tellus integer feugiat. Lorem ipsum dolor sit amet.
-            
-            Lorem ipsum dolor sit amet consectetur adipiscing elit duis. In nibh mauris cursus mattis. Vitae tempus quam pellentesque nec nam aliquam sem. Ullamcorper a lacus vestibulum sed. Accumsan tortor posuere ac ut consequat semper viverra. Odio tempor orci dapibus ultrices in. Natoque penatibus et magnis dis parturient. Lacus laoreet non curabitur gravida arcu ac tortor dignissim convallis. Velit aliquet sagittis id consectetur purus ut. Id volutpat lacus laoreet non curabitur gravida. Dolor magna eget est lorem ipsum dolor sit. Nullam ac tortor vitae purus faucibus ornare suspendisse sed."
-        />
+        /> -->
     </div>
     <footer>
         <p>KTH DH2323 - <a href="https://github.com/procedural-planets/planets-src" target="_blank" rel="noopener noreferrer">GitHub Repository</a></p>
