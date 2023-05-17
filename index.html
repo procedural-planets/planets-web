@@ -6,13 +6,13 @@
 		<meta name="viewport" content="width=device-width" />
 		<meta http-equiv="content-security-policy" content="">
 		<link href="./internal/immutable/assets/0.e3b0c442.css" rel="stylesheet">
-		<link href="./internal/immutable/assets/2.db294c73.css" rel="stylesheet">
-		<link rel="modulepreload" href="./internal/immutable/entry/start.bebe6719.js">
+		<link href="./internal/immutable/assets/2.9845e636.css" rel="stylesheet">
+		<link rel="modulepreload" href="./internal/immutable/entry/start.603ba6fe.js">
 		<link rel="modulepreload" href="./internal/immutable/chunks/index.fe361f2c.js">
-		<link rel="modulepreload" href="./internal/immutable/chunks/singletons.2c33f9f2.js">
-		<link rel="modulepreload" href="./internal/immutable/entry/app.003af8bc.js">
+		<link rel="modulepreload" href="./internal/immutable/chunks/singletons.02c144c7.js">
+		<link rel="modulepreload" href="./internal/immutable/entry/app.23a1c329.js">
 		<link rel="modulepreload" href="./internal/immutable/nodes/0.77ea7a35.js">
-		<link rel="modulepreload" href="./internal/immutable/nodes/2.9cdcd4d2.js">
+		<link rel="modulepreload" href="./internal/immutable/nodes/2.95003fda.js">
 	</head>
 	<body data-sveltekit-preload-data="hover">
 		<div style="display: contents">
@@ -20,13 +20,47 @@
 
 <main class="svelte-16lz6bm"><div class="title svelte-16lz6bm"><h1>Procedural Planets</h1>
         <p class="svelte-16lz6bm">by Albin Kempe, André Fredriksen &amp; Vilhelm Hellmér</p></div>
-    <div class="jorunal"><div class="journal-entry svelte-mw3wna"><h2>A Sphere is Born</h2>
-    <p class="date svelte-mw3wna">2023-05-12</p>
-    <div class="image svelte-mw3wna"><img src="1.png" alt="sphere" class="svelte-mw3wna">
-        <p class="svelte-mw3wna">A basic sphere. Note the lines indicating different surface normals.</p></div>
-    <p class="svelte-mw3wna">The first thing that God did when he created the universe was to create spheres. Without spheres, no planets. Without planets, no humans. Without humans, no DGI course.
+    <div class="jorunal"><div class="journal-entry svelte-1wlz5kv"><h2>Making Our Own Filter! (Really Cool)</h2>
+    <p class="date svelte-1wlz5kv">2023-05-17</p>
+    <div class="image svelte-1wlz5kv"><img src="4.png" alt="Procedurally generated planet" class="svelte-1wlz5kv">
+        <p class="svelte-1wlz5kv">:)</p></div>
+    <p class="svelte-1wlz5kv">Yepp that's it!
+        </p>
+</div>
+        
+        <div class="journal-entry svelte-1wlz5kv"><h2>Planet X?</h2>
+    <p class="date svelte-1wlz5kv">2023-05-16</p>
+    <div class="image svelte-1wlz5kv"><img src="3.png" alt="Procedurally generated planet" class="svelte-1wlz5kv">
+        <p class="svelte-1wlz5kv">Procedurally generated planet with a simple shader.</p></div>
+    <p class="svelte-1wlz5kv">Ahh, an exquisite piece of planetary marvel! Since last time, we have implemented a new type of noise filter and added a simple shader to our planet. 
+        
+        ...
+        </p>
+</div>
+        
+        <div class="journal-entry svelte-1wlz5kv"><h2>Make Some Noise!</h2>
+    <p class="date svelte-1wlz5kv">2023-05-14</p>
+    <div class="image svelte-1wlz5kv"><img src="2.png" alt="Procedurally generated planet" class="svelte-1wlz5kv">
+        <p class="svelte-1wlz5kv">Procedurally generated planet using layerd simplex noise.</p></div>
+    <p class="svelte-1wlz5kv">To change the shape of our sphere to make it into a planet, noise is used to determine the elevation of points on our sphere. The modified version of simplex noise by Sebastian Lague is used in our implementation. Our plan for the future is to implement different types of noise. We have not yet settled on which one, but we have mentioned Worley noise during our group meetings. At this point, we are just following along Lague's tutorial.
 
-        The first step for us and this project is the same. We want to create a solar system with procedurally generated planets. To create these planets, we need spheres! We base our planets on Sebastian Lague's technique for creating spheres. His series about the topic has inspried this project.
+        Using a single layer of simplex noise alone to determine the elevation of points on our sphere basically create a blob. We have different parameters that change the characteristics of the terrain such as rougness and strength. Turning up the roughness increases the distance between points which turns the planet into a spike ball. Pretty cool. At this point we can create blobs, spike balls and kinda meteorites - but that's not really what we are here for. We want that planet shape!!
+
+        To turn our blob into a planet the only thing we need to add is a minimum elevation value to our code. This will ensure that no points have a lower elevation than the minimum elevation. With the right settings, the points that are set to this minimum value will create the oceans on our planet and other points will create chunks of land. This can clearly be seens in the image above. We have our planet! Project finished? No.
+
+        One blob high-lone cannot maketh a planet, but two c'rtainly can. That's right Shakespeare! One blob cannot be both farmland and mountains, it can only be one of them. To achieve an authentic look on our planet, we need to layer our noise. This only means creating multiple noise layers. When we want to calculate the elevation of a point, the output from each noise layer is added to the point's elevation.
+
+        Mountains sticking out of the ocean is ruining the immersion. We only want mountains to appear on land! To fix this, we use one of the noise layers as a mask for the other layers. After doing this, we achieve the result in the image above! Done and dusted for this time!
+        </p>
+</div>
+        
+        <div class="journal-entry svelte-1wlz5kv"><h2>A Sphere Is Born</h2>
+    <p class="date svelte-1wlz5kv">2023-05-12</p>
+    <div class="image svelte-1wlz5kv"><img src="1.png" alt="sphere" class="svelte-1wlz5kv">
+        <p class="svelte-1wlz5kv">A basic sphere. Note the lines indicating different surface normals.</p></div>
+    <p class="svelte-1wlz5kv">The first thing that God did when he created the universe was to create spheres. Without spheres, no planets. Without planets, no Earth. Without Earth, no humans. Without humans, no DGI course.
+
+        The first step for us and this project is the same. We want to create a solar system with procedurally generated planets. To create these planets, we need spheres! We base our planets on Sebastian Lague's technique for creating spheres. His YouTube series about the topic has inspried this project and will be used to create a basic planet.
 
         This technique uses a cube to create a sphere since the size of triangles are the same, resulting in an even distribution of detail. Furthermore, the number of triangles are increased at a reasonable rate when the level of detail is increased. One issue with this technique is that, since the sphere is created from the sides of a cube, surface normals do not match up. This can be seen in the image above. It will however be fixed later in this project.
         
@@ -40,7 +74,7 @@
 			
 			<script>
 				{
-					__sveltekit_1kfaziu = {
+					__sveltekit_h6oi47 = {
 						assets: "/planets-web",
 						base: new URL(".", location).pathname.slice(0, -1),
 						env: {}
@@ -51,8 +85,8 @@
 					const data = [null,null];
 
 					Promise.all([
-						import("./internal/immutable/entry/start.bebe6719.js"),
-						import("./internal/immutable/entry/app.003af8bc.js")
+						import("./internal/immutable/entry/start.603ba6fe.js"),
+						import("./internal/immutable/entry/app.23a1c329.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 2],
