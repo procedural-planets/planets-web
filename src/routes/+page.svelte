@@ -11,15 +11,21 @@
     </div>
     <div class="jorunal">
         <JournalEntry
-        entry_title = "Making Our Own Filter! (Really Cool)"
+        entry_title = "Implementing Worley Noise (Part 1)"
         entry_date = "2023-05-17"
         entry_image =  {{
-            src: "4.png",
-            id: "4",
-            text: ":)",
+            src: "5.png",
+            id: "5",
+            text: "First try at implementing Worley noise. Bottom left corner shows an image of what Worley noise is supposed to look like.",
             desc: "Procedurally generated planet"
             }}
-        entry_text = "Yepp that's it!
+        entry_text = "Worley noise is probably the last thing anyone would associate with planetary surfaces. But in our space, everything is possible.
+
+        When creating Worley noise, a few seed points are randomly picked/generated before calculating the distance from every other point to the closest seed point. The noise value for each point corresponds to the distance to the closest seed point. There are different flavours of Worley noise where it does not necessarily have to be the closest seed point.
+
+        Trying to implement this algorithm did not got very well as can be seen in the image. This might be more difficult that what we initially thought.
+
+        To be continued.
         "
         />
         <!------------------------------------------------------------->
@@ -34,7 +40,11 @@
             }}
         entry_text = "Ahh, an exquisite piece of planetary marvel! Since last time, we have implemented a new type of noise filter and added a simple shader to our planet. 
         
-        ...
+        Mountains in the real world are seldom cone shaped. More often, they are ridge shaped! The new noise filter type is creating this feature by taking the absolute value and inverting the original simplex noise. To make the ridges more distinct, the resulting value is squared. The code was modified to support multiple types of noise filters. This opens up to the possibility of easily adding additional noise filters in the future.
+
+        Next up: shader. We wanted to colour our planet based on the elevation. The first step was finding the highest and lowest point on our planet. The minimum and maximum elevation can be set at the same time that we are evaluating the elevation of each point on our sphere by checking if the elevation of a point is smaller than the minimum or larger than the maxium. The next step is creating the shader. This is easy to do in Unity. The elevation of a pixel on the planet is converted to a value between zero and one based on where it lies between the minimum and maxiumum elevation. The next step was mapping a gradient to these values and boom! Earth 2.0. As we can see in the image, the ocean, which has the lowest elevation, is coloured blue while land is green and mountain tops are snow white.
+        
+        Up to this point, we have followed Sebastian Lague's tutorial on procedural planets. We have learned a lot about how to use noise to procedurally generate planets. Furthermore, we have gained a lot of experience in working with Unity, which we all had limited experience with before this project. Our next step will be to add another noise filter.
         "
         />
         <!------------------------------------------------------------->
