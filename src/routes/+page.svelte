@@ -4,13 +4,63 @@
 </script>
 
 <main>
+    
     <div class="title">
         <h1>Procedural Planets</h1>
         <p>by Albin Kempe, André Fredriksen & Vilhelm Hellmér</p>
     </div>
     <div class="jorunal">
         <JournalEntry
-        entry_title = "A Sphere is Born"
+        entry_title = "Making Our Own Filter! (Really Cool)"
+        entry_date = "2023-05-17"
+        entry_image =  {{
+            src: "4.png",
+            id: "4",
+            text: ":)",
+            desc: "Procedurally generated planet"
+            }}
+        entry_text = "Yepp that's it!
+        "
+        />
+        <!------------------------------------------------------------->
+        <JournalEntry
+        entry_title = "Planet X?"
+        entry_date = "2023-05-16"
+        entry_image =  {{
+            src: "3.png",
+            id: "3",
+            text: "Procedurally generated planet with a simple shader.",
+            desc: "Procedurally generated planet"
+            }}
+        entry_text = "Ahh, an exquisite piece of planetary marvel! Since last time, we have implemented a new type of noise filter and added a simple shader to our planet. 
+        
+        ...
+        "
+        />
+        <!------------------------------------------------------------->
+        <JournalEntry
+        entry_title = "Make Some Noise!"
+        entry_date = "2023-05-14"
+        entry_image =  {{
+            src: "2.png",
+            id: "2",
+            text: "Procedurally generated planet using layerd simplex noise.",
+            desc: "Procedurally generated planet"
+         }}
+        entry_text = "To change the shape of our sphere to make it into a planet, noise is used to determine the elevation of points on our sphere. The modified version of simplex noise by Sebastian Lague is used in our implementation. Our plan for the future is to implement different types of noise. We have not yet settled on which one, but we have mentioned Worley noise during our group meetings. At this point, we are just following along Lague's tutorial.
+
+        Using a single layer of simplex noise alone to determine the elevation of points on our sphere basically create a blob. We have different parameters that change the characteristics of the terrain such as rougness and strength. Turning up the roughness increases the distance between points which turns the planet into a spike ball. Pretty cool. At this point we can create blobs, spike balls and kinda meteorites - but that's not really what we are here for. We want that planet shape!!
+
+        To turn our blob into a planet the only thing we need to add is a minimum elevation value to our code. This will ensure that no points have a lower elevation than the minimum elevation. With the right settings, the points that are set to this minimum value will create the oceans on our planet and other points will create chunks of land. This can clearly be seens in the image above. We have our planet! Project finished? No.
+
+        One blob high-lone cannot maketh a planet, but two c'rtainly can. That's right Shakespeare! One blob cannot be both farmland and mountains, it can only be one of them. To achieve an authentic look on our planet, we need to layer our noise. This only means creating multiple noise layers. When we want to calculate the elevation of a point, the output from each noise layer is added to the point's elevation.
+
+        Mountains sticking out of the ocean is ruining the immersion. We only want mountains to appear on land! To fix this, we use one of the noise layers as a mask for the other layers. After doing this, we achieve the result in the image above! Done and dusted for this time!
+        "
+        />
+        <!------------------------------------------------------------->
+        <JournalEntry
+        entry_title = "A Sphere Is Born"
         entry_date = "2023-05-12"
         entry_image =  {{
             src: "1.png",
@@ -18,9 +68,9 @@
             text: "A basic sphere. Note the lines indicating different surface normals.",
             desc: "sphere"
          }}
-        entry_text = "The first thing that God did when he created the universe was to create spheres. Without spheres, no planets. Without planets, no humans. Without humans, no DGI course.
+        entry_text = "The first thing that God did when he created the universe was to create spheres. Without spheres, no planets. Without planets, no Earth. Without Earth, no humans. Without humans, no DGI course.
 
-        The first step for us and this project is the same. We want to create a solar system with procedurally generated planets. To create these planets, we need spheres! We base our planets on Sebastian Lague's technique for creating spheres. His series about the topic has inspried this project.
+        The first step for us and this project is the same. We want to create a solar system with procedurally generated planets. To create these planets, we need spheres! We base our planets on Sebastian Lague's technique for creating spheres. His YouTube series about the topic has inspried this project and will be used to create a basic planet.
 
         This technique uses a cube to create a sphere since the size of triangles are the same, resulting in an even distribution of detail. Furthermore, the number of triangles are increased at a reasonable rate when the level of detail is increased. One issue with this technique is that, since the sphere is created from the sides of a cube, surface normals do not match up. This can be seen in the image above. It will however be fixed later in this project.
         

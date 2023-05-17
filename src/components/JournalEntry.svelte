@@ -26,7 +26,7 @@
         border-radius: 15px;
         box-shadow: 0 4px 6px 0 #00000033;
         padding: 1em 2em 2em 2em;
-        margin-bottom: 4em;
+        margin-bottom: 3em;
     }
 
     .date {
