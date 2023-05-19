@@ -11,6 +11,21 @@
     </div>
     <div class="jorunal">
         <JournalEntry
+        entry_title = "Implementing Worley Noise (Part 2)"
+        entry_date = "2023-05-19"
+        entry_image =  {{
+            src: "worley.png",
+            id: "6",
+            text: "Procedurally generated planet using Worley Noise.",
+            desc: "Procedurally generated planet using Worley Noise."
+            }}
+        entry_text = "Last minute we managed to get the Worley Noise working! When creating the Worley Noise filter we created a number of seed points. We added a parameter to control the number of seed points. When evaluating a point, we looped through these seed points and calculated the distance from that point to the closest seed point which was returned as the noise value.
+
+        This fill be our final entry. Bye :)
+        "
+        />
+        <!------------------------------------------------------------->
+        <JournalEntry
         entry_title = "Implementing Worley Noise (Part 1)"
         entry_date = "2023-05-17"
         entry_image =  {{
