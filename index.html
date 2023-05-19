@@ -7,12 +7,12 @@
 		<meta http-equiv="content-security-policy" content="">
 		<link href="./internal/immutable/assets/0.e3b0c442.css" rel="stylesheet">
 		<link href="./internal/immutable/assets/2.9845e636.css" rel="stylesheet">
-		<link rel="modulepreload" href="./internal/immutable/entry/start.110564bd.js">
+		<link rel="modulepreload" href="./internal/immutable/entry/start.f3a446b5.js">
 		<link rel="modulepreload" href="./internal/immutable/chunks/index.fe361f2c.js">
-		<link rel="modulepreload" href="./internal/immutable/chunks/singletons.7e582309.js">
-		<link rel="modulepreload" href="./internal/immutable/entry/app.8608cd4a.js">
+		<link rel="modulepreload" href="./internal/immutable/chunks/singletons.bd169fe6.js">
+		<link rel="modulepreload" href="./internal/immutable/entry/app.f4bbc3e3.js">
 		<link rel="modulepreload" href="./internal/immutable/nodes/0.77ea7a35.js">
-		<link rel="modulepreload" href="./internal/immutable/nodes/2.2d5946ce.js">
+		<link rel="modulepreload" href="./internal/immutable/nodes/2.3b75a6c4.js">
 	</head>
 	<body data-sveltekit-preload-data="hover">
 		<div style="display: contents">
@@ -26,7 +26,7 @@
         <p class="svelte-1wlz5kv">Procedurally generated planet using Worley Noise.</p></div>
     <p class="svelte-1wlz5kv">Last minute we managed to get the Worley Noise working! When creating the Worley Noise filter we created a number of seed points. We added a parameter to control the number of seed points. When evaluating a point, we looped through these seed points and calculated the distance from that point to the closest seed point which was returned as the noise value.
 
-        This fill be our final entry. Bye :)
+        This will be our final entry. Bye :)
         </p>
 </div>
         
@@ -94,7 +94,7 @@
 			
 			<script>
 				{
-					__sveltekit_qtohtg = {
+					__sveltekit_1ibhsz9 = {
 						assets: "/planets-web",
 						base: new URL(".", location).pathname.slice(0, -1),
 						env: {}
@@ -105,8 +105,8 @@
 					const data = [null,null];
 
 					Promise.all([
-						import("./internal/immutable/entry/start.110564bd.js"),
-						import("./internal/immutable/entry/app.8608cd4a.js")
+						import("./internal/immutable/entry/start.f3a446b5.js"),
+						import("./internal/immutable/entry/app.f4bbc3e3.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 2],
